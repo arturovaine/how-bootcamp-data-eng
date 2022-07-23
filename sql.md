@@ -129,3 +129,19 @@ Para verificar processos, semelhante ao que foi executado anteriormente, com `ps
 docker-compose ps
 ```
 
+
+<br>
+
+## CTEs
+
+
+#### Common Table Expression: "WITH"...CTE name, CTE body
+
+<br><br>
+
+ 
+
+
+
+
+
