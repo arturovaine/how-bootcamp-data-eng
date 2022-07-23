@@ -100,7 +100,7 @@ services:
             -"./db:/var/lib/postgresql/data/"
     
 ```
-Então para rodar:
+Então para rodar o docker-compose, no terminal digite:
 
 ```bash
 docker-compose up db
@@ -111,7 +111,7 @@ docker-compose up db
 - Cria container
 - Roda/executa container
 
-Para parar o container ativo no terminal:
+Para parar o container ativo:
 
 ```bash
 docker-compose down
