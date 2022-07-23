@@ -14,7 +14,7 @@
 ## Docker
 <br>
 
-Dockerfile:
+`Dockerfile`
 
 ```Dockerfile
 FROM httpd
@@ -80,7 +80,8 @@ Orquestração de containers
 <br><br>
 
 
-
+`docker-compose.yml`
+<br />
 ```yaml
 version: "3"
 services:
