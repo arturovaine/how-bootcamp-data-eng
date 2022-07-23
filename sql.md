@@ -60,3 +60,14 @@ Para que a aplicação rode desacoplada do terminal, incluir tag `-d`, de "detac
 ```bash
 docker run -d -p 80:80 web_apache
 ```
+
+Verificar containers ativos:
+
+```bash
+docker ps
+```
+Parar/matar processo:
+
+```bash
+docker stop web_apache
+```
