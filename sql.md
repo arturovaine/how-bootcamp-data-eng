@@ -123,7 +123,7 @@ Comando:
 
 Para reiniciar, é necessário apenas executar novamente o comando `docker-compose up db`
 
-Para verificar processos, semelhante ao que foi executado anteriormente, com `ps':
+Para verificar processos, semelhante ao que foi executado anteriormente, com `ps`:
 
 ```bash
 docker-compose ps
