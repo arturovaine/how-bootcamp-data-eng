@@ -71,3 +71,57 @@ Parar/matar processo:
 ```bash
 docker stop web_apache
 ```
+
+<br>
+
+## Docker Compose
+<br>
+Orquestração de containers
+<br><br>
+
+
+
+```yaml
+version: "3"
+services:
+    db:
+        image: postgres
+        container_name: "pg_container"
+        environment:
+            - POSTGRES_USER=root
+            - POSTGRES_PASSWORD=rootroot
+            -- POSTGRES_DB=test_db
+        ports:
+            -"5342:5342"
+        volumes:
+            -"./db:/var/lib/postgresql/data/"
+    
+```
+Então para rodar:
+
+```bash
+docker-compose up db
+```
+
+- Cria network
+- Carregar imagens requeridas
+- Cria container
+- Roda/executa container
+
+Para parar o container ativo no terminal:
+
+```bash
+docker-compose down
+```
+Comando:
+- Para execução do container
+- Remove container
+- Remove network
+
+Para reiniciar, é necessário apenas executar novamente o comando `docker-compose up db`
+Para verificar processos, semelhante ao que foi executado anteriormente, com `ps':
+
+```bash
+docker-compose ps
+```
+
