@@ -28,6 +28,8 @@ EXPOSE 80
 
 - EXPOSE para abrir a porta do container
 
+Executar no terminal:
+
 ```bash
 docker build -t web_apache .
 ```
@@ -41,7 +43,7 @@ docker build -t web_apache .
 - Step 3/3: EXPOSE...-> definir que a porta indicada deve ficar aberta
 
 
-Para verificar que imagens estão disponíveis, já carregadas anteriormente:
+Para verificar que imagens estão disponíveis, já carregadas anteriormente, executar no terminal::
 
 ```bash
 docker image ls
