@@ -122,6 +122,7 @@ Comando:
 - Remove network
 
 Para reiniciar, é necessário apenas executar novamente o comando `docker-compose up db`
+
 Para verificar processos, semelhante ao que foi executado anteriormente, com `ps':
 
 ```bash
