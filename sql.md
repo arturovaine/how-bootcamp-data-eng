@@ -14,7 +14,7 @@
 ## Docker
 <br>
 
-Dockerfile
+Dockerfile:
 
 ```Dockerfile
 FROM httpd
@@ -33,9 +33,13 @@ docker build -t web_apache .
 ```
 "." para referenciar a pasta na qual estou executando
 
-Step 1/3: FROM httpd -> buscar umagem, realizar download se necessário
-Step 2/3: COPY... -> copiar o conteúdo do endereço indicado, para o endereço do servidor indicado
-Step 3/3: EXPOSE...-> definir que a porta indicada deve ficar aberta
+
+- Step 1/3: FROM httpd -> buscar umagem, realizar download se necessário
+
+- Step 2/3: COPY... -> copiar o conteúdo do endereço indicado, para o endereço do servidor indicado
+
+- Step 3/3: EXPOSE...-> definir que a porta indicada deve ficar aberta
+
 
 Para verificar que imagens estão disponíveis, já carregadas anteriormente:
 
@@ -44,10 +48,11 @@ docker image ls
 ```
 
 Para rodar a aplicação/subir o servidor:
+
 ```bash
 docker run -p 80:80 web_apache
 ```
-tag `-p` de port, para indicar, em ordem, a porta que será aberta na máquina local, e a porta do container a ser mapeado
+Utilizando a tag `-p` de port, para indicar, em ordem, a porta que será aberta na máquina local, e a porta do container a ser mapeado
 e a imagem a utilizar, no caso o servidor apache, `web_apache`
 
 Para que a aplicação rode desacoplada do terminal, incluir tag `-d`, de "detach":
