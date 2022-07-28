@@ -1,5 +1,5 @@
 <!-- ![pipeline-AWS](./lambda/pipeline-lambda.png) -->
-<br><br>
+<!-- <br><br> -->
 # How Education: <a href="https://howedu.com.br/cohort/engenharia-de-dados/" target="_blank">Bootcamp de Engenharia de Dados</a>
 
 <b>Introdução à Engenharia de Dados</b>
