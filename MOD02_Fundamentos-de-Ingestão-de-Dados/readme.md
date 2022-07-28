@@ -43,3 +43,7 @@ x = [
 ]
 ```
 
+`#%%` permite a divisão do código como no notebook jupyter.
+
+<!-- pip install -U ipykernel -->
+
