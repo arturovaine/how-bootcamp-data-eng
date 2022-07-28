@@ -15,7 +15,7 @@ A proposta do exercício é coletar esses dados e levantar as informações da L
 - Quais combinações de números Pares(p), Ímpares(i) e Primos(np) saem por sorteio?
 
 ---
-## Ambiente virtual
+## Configurar ambiente virtual
 
 "O módulo venv fornece suporte para a criação de 'ambientes virtuais' leves com seus próprios diretórios de site, opcionalmente isolados dos diretórios de site do sistema. Cada ambiente virtual possui seu próprio binário Python (que corresponde à versão do binário usado para criar esse ambiente) e pode ter seu próprio conjunto independente de pacotes Python instalados nos diretórios do site."
 
@@ -43,7 +43,7 @@ ou
 
 `source .venv/bin/activate`
 
-## Python
+## Inciar análise via Python
 
 
 Importar bibliotecas:
