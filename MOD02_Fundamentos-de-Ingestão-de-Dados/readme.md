@@ -75,3 +75,11 @@ print( f" 20 dólares hoje custam {round((float(dolar['bid']) * 20), 2)} reais")
 
 ## Erros e retentativas
 
+```Python
+def cotacao(valor, moeda):
+    url = f'https://economia.awesomeapi.com.br/json/last/{moeda}'
+    url = 'https://economia.awesomeapi.com.br/json/last/{}'.format(moeda)
+    res = requests.get(url)
+    dolar = json.loads(res.text)[moeda.replace('-', '')]
+        f"{valor} {moeda[:3]} hoje custam {float(dolar['bid']) * valor} {moeda[3:]}"
+```
