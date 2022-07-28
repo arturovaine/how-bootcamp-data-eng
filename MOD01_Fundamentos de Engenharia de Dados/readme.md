@@ -84,11 +84,89 @@ System-specific parameters and functions
 
 ```Python
 url = 'https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados?modalidade=Lotofácil'
-url = sys.argv[1]
+# url = sys.argv[1]
 ```
 
+"For every invocation of Python, sys.argv is automatically a list of strings representing the arguments (as separated by spaces) on the command-line. The name comes from the C programming convention in which argv and argc represent the command line arguments." 
+https://stackoverflow.com/questions/4117530/sys-argv1-meaning-in-script
+
+
 ```Python
-r = requests.get(url)
+r = requests.get(url, verify=False)
+# https://stackoverflow.com/questions/10667960/python-requests-throwing-sslerror
 ```
+
+Utilizou-se o paramêtro de verificação com valor `False` devido ao erro de SSL no acesso à API.
+
+O valor de `r` deverá ser `<Response [200]>`, ou seja, requisição bem sucedida, e, diferentemente da resposta `204`, a resposta deve possuir um `body`:
+
+```Python
+r.text
+```
+`r.text` irá retornar o código HTML da página:
+
+```HTML
+'{\r\n  "html": "<table class=\\"tabela-resultado lotofacil\\">\\r\\n<thead>\\ ... </thead></tbody>\\r\\n</table>"\r\n}'
+
+```
+
+Para filtrar o corpo da resposta:
+
+```Python
+r.text
+r_text = r.text.replace('\\r\\n', '')
+r_text = r.text.replace('"\r\n}', '')
+r_text = r.text.replace('{\r\n  "html": "', '')
+r_text
+```
+
+Criar dataframe:
+
+```Python
+df = pd.read_html(r_text)
+```
+
+`type(df)` retorna `list`,
+
+e `type(df[0])` retorna `pandas.core.frame.DataFrame`
+
+É isto, o dataframe a ser analisado está na primeira posição da lista.
+
+A execução da request, no dia da submissão deste readme, retornou uma tabela com 10499 linhas 32 colunas.
+
+Fazer um backup, por precaução:
+
+`df1 = df`
+
+`df=df[0].copy()`
+
+Verificar títulos no cabeçalho:
+
+`df.columns` que deve estar com `\r\n`
+
+Para corrigir:
+
+```Python
+new_columns = df.columns
+new_columns = list(i.replace('\\r\\n', '') for i in new_columns)
+new_columns
+
+df.columns = new_columns # Atribuir novo cabeçalho
+df[df['Bola1'] == df['Bola1']] # Para limpar os 'NaN'
+```
+
+Na Lotofácil são escolhidos 15 números em 25.
+Então, para criar a população de 1 a 25:
+
+`nr_pop = list(range(1,26))`
+
+Os grupos de análise serão:
+
+`nr_pares = [2, 4, 6, 8, 10, 12, 14, 16, 18]`
+
+`nr_impares = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]`
+
+`nr_primos = [2, 3, 5, 7, 11, 13, 17, 19, 23]`
+
 
 
