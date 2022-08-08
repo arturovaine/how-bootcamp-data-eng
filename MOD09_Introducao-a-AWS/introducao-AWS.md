@@ -21,7 +21,7 @@ https://www.visualcapitalist.com/aws-powering-the-internet-and-amazons-profits/
 - Ativar alarme de faturamento/cobrança
 - Deletar/desativar imediatamente todos os recursos que você criou para prototipar/testar, mesmo que esteja no free-tier
 
-No cadastro, é possível utilizar um "alias" da seguinte forma, no login:
+No cadastro, é possível utilizar um `alias` da seguinte forma, no login:
 
 `seu-email-normal+alias@email.com`
 

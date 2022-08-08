@@ -116,10 +116,10 @@ Para parar o container ativo:
 ```bash
 docker-compose down
 ```
-Comando:
-- Para execução do container
-- Remove container
-- Remove network
+Comando para:
+- Parar execução do container
+- Remover container
+- Remover network
 
 Para reiniciar, é necessário apenas executar novamente o comando `docker-compose up db`
 
