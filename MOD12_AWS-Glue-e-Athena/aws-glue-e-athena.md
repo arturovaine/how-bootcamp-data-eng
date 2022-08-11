@@ -20,5 +20,80 @@ ETL -> verificar o Databricks
 
 No Glue é interessante a parte de catálogo.
 
+Catálogo é baseado no Apache Hive (hive.apache.org), ferramenta opensource. O AWS Glue foi construído sobre o Hive, é como se fosse um hive gerenciado, "pré-configurado". Além disto, o Glue tem como uma das facilidades os Crawlers. 
+
+<br />
+
+---
+
+## O que são metadados
+
+Metadados: dados sobre os dados.
+
+Exemplo:
+
+
+
+```
+Tipo de arquivo: CSV
+
+Localização: s3://data-lake-raw/arquivo.csv
+
+
+Compressão: GZIP
+
+Schema:
+  customer_id, string
+  created_at, date
+  name, string
+  ...
+
+Tamanho: 2Mb
+
+Nome da tabela: consumidores
+
+Nome da database: app
+
+```
+
+Ferramentas que podem acessar os metadados:
+
+- Athena
+- Spark
+- Presto
+
+
+Etapas:
+
+1. Leitura de metadados
+2. Leitura dos dados
+
+
+<br />
+
+---
+
+## Databases, Crawlers e Tables
+
+### Database
+
+> "A database is a set of associated table definitions, organized into a logical group."
+
+
+
+<br />
+
+---
+## Introdução ao AWS Athena
+
+<br />
+
+---
+## Queries no Data Lake utilizando o Athena
+
+
+<br />
+
+---
 
 <br />

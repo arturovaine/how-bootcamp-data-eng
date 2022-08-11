@@ -143,4 +143,3 @@ Um arquivo parquet é do tipo colunar, então desta forma ocorre a otimização 
 ## Boas práticas ao criar um Data Lake
 
 
-
