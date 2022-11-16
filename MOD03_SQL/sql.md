@@ -132,16 +132,45 @@ docker-compose ps
 
 <br>
 
-## CTEs
+## CTEs (subqueries)
 
 
 #### Common Table Expression: "WITH"...CTE name, CTE body
 
 <br><br>
 
- 
+```sql
+WITH cte_table_1 as (
+    SELECT columns1, column2
+    FROM table1
+)
+
+cte_table2 as (
+    SELECT columns1, column2
+    FROM table_xyz
+)
+
+SELECT column_abc,
+FROM cte_table_1 FULL JOIN cte_table_2;
+
+```
+
+<br>
+
+## Window functions
 
 
+#### ...
+
+<br><br>
 
 
+```sql
 
+SELECT ...
+    , row_number() over() ...
+    , rank() over() ...
+    , lag() over() ...
+    , lead() over() ...
+
+```
