@@ -9,7 +9,7 @@
 
 <b>Fundamentos de captura de dados</b>
 
-- Módulo 3: SQL
+- Módulo 3: SQL 
 - Módulo 4: Capturando dados de uma API
 - Módulo 5: Capturando dados com crawlers
 
